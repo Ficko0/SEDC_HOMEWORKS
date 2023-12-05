@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #474448;
+}
+
+.logoImg{
+    width: 250px;
+}
+
+nav{
+    background-color: #2D232E;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.link1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.link1 button{
+    cursor: pointer;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: #2D232E;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.link1 button:hover{
+    transition: 200ms ease-in;
+    background-color: #3c2f3d;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 50px;
+}
+
+.box{
+    width: 1200px;
+    margin: auto;
+    padding: 30px;
+    border: 3px solid lightgray;
+    border-radius:40px;
+    background-color: #E0DDCF;
+}
+
+.h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.p1{
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #F1F0EA;
+    padding: 60px;
+}
+
+.backtotop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.backtotop a{
+    text-decoration: none;
+    color: black;
+}
+
+.backtotop button{
+    cursor: pointer;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #F1F0EA;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.backtotop button:hover{
+    transition: 200ms ease-in;
+    background-color: #c7c5bd;
+}
+
+.footerp1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-weight: 700;
+}
+
+.h1P{
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.parfumes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parfumes p{
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.parfumes img{
+    width: 220px;
+}
+
+.parfumes img:hover{
+    transition: 400ms ease-in-out;
+    scale: 1.1;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.box1{
+    padding: 35px;
+    width: 700px;
+    border: 3px solid lightgray;
+    border-radius:40px;
+    background-color: #E0DDCF;
+    margin: 0 30px 30px 30px;
+}
+
+.box3{
+    padding: 35px;
+    width: 700px;
+    border: 3px solid lightgray;
+    border-radius:40px;
+    background-color: #E0DDCF;
+}
+
+.h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 30px;
+}
+
+.p1End{
+    text-align: center;
+    padding: 40px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.text{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text input{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.submitButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.submitButton button{
+    padding: 12px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #E0DDCF;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.submitButton button:hover{
+    transition: 200ms ease-in;
+    background-color: #c2beae;
+}
+
+.h3{
+    text-align: justify;
+    padding: 20px;
+}
+
+.p1Bold{
+    text-align: justify;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        width: 100vw;
+    }
+    .logoImg{
+        width: 170px;
+    }
+
+    nav{
+        display: flex;
+        height: 100px;
+        width: 100vw;
+        position: sticky;
+        top: 0px;
+    }
+
+    footer{
+        width: 100vw;
+    }
+
+    footer{
+        width: 100vw;
+    }
+
+    .footerp1{
+        scale: 0.7;
+    }
+
+    .links{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .links button{
+        scale: 0.8;
+    }
+
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box{
+        width: 600px;
+    }
+
+    .h1{
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    .h2{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .h3{
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .p1{
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .p1Bold{
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box1{
+        width: 550px;
+    }
+
+    .h1P{
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .parfumes p{
+        font-size: 15px;
+    }
+
+    .parfumes img{
+        width: 180px;
+    }
+
+    .form{
+        scale: 0.85;
+    }
+
+    .backtotop button{
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header{
+        width: 100vw;
+    }
+    .logoImg{
+        width: 100px;
+    }
+
+    nav{
+        display: flex;
+        height: 100px;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        scale: 1;
+        position: sticky;
+        top: 0px;
+    }
+
+    footer{
+        width: 100vw;
+    }
+
+    .footerp1{
+        scale: 0.6;
+    }
+
+    .links{
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .link1 button{
+        justify-content: space-evenly;
+    }
+
+    .links button{
+        scale: 0.45;
+    }
+
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box{
+        scale: 0.5;
+    }
+
+    .h1{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .h3{
+        text-align: center;
+        font-size: 9px;
+    }
+
+    .p1{
+        text-align: justify;
+        font-size: 10px;
+    }
+
+    .p1Bold{
+        text-align: justify;
+        font-size: 10px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box1{
+        width: 280px;
+    }
+
+    .h1P{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .parfumes p{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .parfumes img{
+        width: 120px;
+    }
+
+    .form{
+        scale: 0.55;
+    }
+
+    .backtotop button{
+        scale: 0.5;
+    }
+}
