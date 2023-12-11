@@ -1,3 +1,4 @@
+let alertMessage = alert("You have 20000$ in your bank account!")
 let cashWithdrawInput = prompt("Please enter the sum you would like to take out.");
 
 function atmWithdraw(cashWithdrawInput) {
@@ -14,6 +15,7 @@ function atmWithdraw(cashWithdrawInput) {
     else {
         return alert(`You have succesfully withdrawn ${cashWithdrawInput}$ and you have ${atmWithdrawCalc}$ left.`)
     }
+    
 }
 
 atmWithdraw(cashWithdrawInput);
