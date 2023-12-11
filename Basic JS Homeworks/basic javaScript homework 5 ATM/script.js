@@ -1,4 +1,4 @@
-let cashWithdrawInput = parseInt(prompt("Please enter the sum you would like to take out."));
+let cashWithdrawInput = prompt("Please enter the sum you would like to take out.");
 
 function atmWithdraw(cashWithdrawInput) {
 
