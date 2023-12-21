@@ -1,0 +1,10 @@
+button{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+table, th, td, tr{
+    border: 2px solid black;
+    padding: 5px;
+}
+
