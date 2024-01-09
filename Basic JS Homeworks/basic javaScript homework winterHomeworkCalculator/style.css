@@ -32,7 +32,7 @@ h1 {
     min-height: 100vh;
 }
 
-.calculatorGridDisplay > button {
+.calculatorGridDisplay button {
     cursor: pointer;
     outline: none;
     border: 1px solid black;
@@ -42,7 +42,7 @@ h1 {
     color: white;
 }
 
-.calculatorGridDisplay > button:hover {
+.calculatorGridDisplay button:hover {
     background-color: rgba(32, 178, 170, 0.8);
 }
 
