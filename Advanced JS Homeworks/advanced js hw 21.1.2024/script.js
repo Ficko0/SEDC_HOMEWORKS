@@ -6,8 +6,8 @@ const nextBtn = document.querySelector('.nextBtn');
 const divToCreate2 = document.querySelector('.toCreate2');
 const previousBtn = document.querySelector('.previousBtn');
 
-function fetchAPI() {
-    fetch ('https://swapi.dev/api/planets/')
+function fetchAPI(url) {
+    fetch (url)
         .then (data => data.json())
             .then (res => {
                 table.innerHTML += `
@@ -33,7 +33,7 @@ function fetchAPI() {
 }
 
 button.addEventListener('click', () => {
-    fetchAPI();
+    fetchAPI('https://swapi.dev/api/planets/');
 })
 
 let counter = 1;
