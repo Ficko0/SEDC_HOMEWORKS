@@ -19,8 +19,7 @@ function fizzBuzz() {
     }
 }
 
-
-console.log(fizzBuzz());
+fizzBuzz();
 
 const findArrays = (arr) => {
     const min = Math.min(...arr)
