@@ -1,0 +1,16 @@
+#pages .page {
+    display: none;
+    text-align: center;
+}
+
+#pages .page:first-child {
+    display: block;
+}
+
+body {
+    background-image: url("https://plainbackground.com/plain1024/87cefa.png");
+}
+
+h1 {
+    padding: 20px;
+}

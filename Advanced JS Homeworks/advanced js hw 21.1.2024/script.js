@@ -61,7 +61,11 @@ function printAll () {
                         </tr>
                         </tbody>`
                     }
-                    if (res.next === null) {
+                    if (res.previous !== null) {
+                        nextBtn.disabled = false;
+                    }
+
+                    else {
                         nextBtn.disabled = true;
                     }
             })
@@ -72,11 +76,10 @@ nextBtn.addEventListener('click', () => {
     table2.innerHTML = '';
 })
 
-let secondCounter = 6;
 
 function previousItems () {
-    secondCounter --;
-    fetch (`https://swapi.dev/api/planets/?page=${secondCounter}`)
+    counter --;
+    fetch (`https://swapi.dev/api/planets/?page=${counter}`)
         .then (data => data.json())
             .then (res => {
                 table2.innerHTML += `
@@ -97,7 +100,10 @@ function previousItems () {
                     </tr>
                 </tbody>`
                 }
-                if (res.previous === null) {
+                if (res.next !== null) {
+                    previousBtn.disabled = false;
+                }
+                else {
                     previousBtn.disabled = true;
                 }
             })
