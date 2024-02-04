@@ -1,0 +1,52 @@
+.displayFlex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imgAndH1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background-color: #a1cced;
+}
+
+#pushDown {
+    padding: 50px;
+}
+
+.paragraph {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1 {
+    background-color: #b6d7f0;
+}
+
+.buttons {
+    padding: 30px;
+    background-color: #56b5e3;
+}
+
+.toDisplay {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    margin: auto;
+    padding: 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+.flexSearch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 100vw;  
+}
+
+.card-title {
+    text-align: center;
+}

@@ -99,9 +99,22 @@ console.log('=======================================================');
 
 //High Order Function (.sort)
 console.log('=========================.sort==============================');
-let copyArray = [...students]; //so tri tocki kako [...imeNaNekojaNiza] se pravi kopija od nekoja niza
+let copyArray = [...students]; //so tri tocki primer: [...imeNaNekojaNiza] se pravi kopija od nekoja niza
 console.log(copyArray);
 console.log('=======================================================');
 console.log(copyArray.sort((x, y) => x.avarageGrade - y.avarageGrade)); //ova e za da gi podredi od najmal do najgolem
 console.log(copyArray.sort((x, y) => y.avarageGrade - x.avarageGrade)); //ova e za da gi podredi od najgolem do najmal
 console.log('=======================================================');
+copyArray.sort((x, y) => x.firstName.localeCompare(y.firstName));
+console.log('Sort String with .localeCompare()');
+console.log(copyArray);
+console.log('=======================================================');
+
+
+//High Order Function (.replace)
+console.log('=========================.replace==============================');
+let string = '30/01/2024';
+console.log(string);
+console.log('=======================================================');
+let replacedString = string.replaceAll('/', '-');
+console.log(replacedString);
