@@ -26,18 +26,18 @@ function Subject (subjectName, numberOfClasses, isElective, currentAcademy, curr
     this.currentAcademy = currentAcademy;
     this.currentStudents = currentStudents;
 
-    this.overrideClasses = function () {
-        if (this.numberOfClasses <= 3) {
+    this.overrideClasses = function (classes) {
+        if (classes <= 3) {
             console.log('The number of classes cannot be smaller than 3');
         }
         else {
-            console.log(`You have ${this.numberOfClasses} classes remaining.`);
+            console.log(`You have ${classes} classes remaining.`);
         }
     }
 }
 
-let subject1 = new Subject ('JAVA', 5, true, 'SEDC', ['petre', 'marija', 'fico']);
-subject1.overrideClasses();
+let subject1 = new Subject ('JAVA', true, 'SEDC', ['petre', 'marija', 'fico']);
+subject1.overrideClasses(4);
 
 function Student (studentFirstName, studentLastName, studentAge) {
     this.studentFirstName = studentFirstName;
@@ -46,7 +46,11 @@ function Student (studentFirstName, studentLastName, studentAge) {
     this.completedSubjects = [];
     this.academy = null;
     this.currentSubject = null;
-    this.startAcademy = academy1.academyName;
+
+    this.startAcademy = function (someAcademy) {
+        this.academy = someAcademy;
+        someAcademy.students.push(this);
+    }
 
     this.startSubject = function () {
         if (this.academy == academy1.academyName && this.currentSubject.includes(subject1.subjectName)) {
@@ -58,6 +62,7 @@ function Student (studentFirstName, studentLastName, studentAge) {
             console.log(`The subject is not completed.`);
         }
     }
+
 }
 
 let student1 = new Student ('Filip', 'Zlatanovski', 20, ['C++'], 'SEDC', ['javaScript']);

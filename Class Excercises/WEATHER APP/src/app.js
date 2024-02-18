@@ -58,9 +58,7 @@ let navbarService = {
                     avgTempSum += avg.main.temp;
                 }
                 infoTable.innerHTML = `
-                <td>${Math.round(maxTemp)}°C</td>
-                <td>${Math.round(minTemp)}°C</td>
-                <td>${Math.round(avarage)}°C</td>`
+                <td>${Math.round(maxTemp)}°C / ${Math.round (minTemp)}°C / ${Math.round(avarage)}°C</td>`
             })
     }
 }

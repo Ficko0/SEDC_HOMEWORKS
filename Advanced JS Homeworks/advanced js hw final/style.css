@@ -1,0 +1,66 @@
+.displayFlex {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #E3B23C;
+}
+
+.displayFlex h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.displayFlex p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+body {
+    background-color: #EDEBD7;
+}
+
+.showTableButton {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.showTableButton button {
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.toCreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 25px;
+}
+
+.organise {
+    justify-content: center;
+    align-items: center;
+}
+
+.bgColor {
+    position: sticky;
+    top: 0;
+}
+
+.tableAddContent {
+    display: none;
+    text-align: center;
+}
+
+.padding {
+    padding: 20px;
+}
