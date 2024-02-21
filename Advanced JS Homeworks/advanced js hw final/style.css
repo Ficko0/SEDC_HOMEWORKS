@@ -64,3 +64,19 @@ body {
 .padding {
     padding: 20px;
 }
+
+.flexRow {
+    display: flex;
+    gap: 0.6rem;
+    padding: 5px;
+}
+
+.navFlex {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.displayNone {
+    display: none;
+}
