@@ -14,6 +14,8 @@ const selectorByDoors = document.getElementById('selectorByDoors');
 const selectorByColor = document.getElementById('selectorByColor');
 const isNew = document.getElementById('isNew');
 const isOld = document.getElementById('isOld');
+const both = document.getElementById('both');
+const horsePowerRange = document.getElementById('horsePowerRange');
 const searchBar = document.getElementById('searchBar');
 const searchBtn = document.getElementById('searchBtn');
 const dangerDiv = document.querySelector('.displayNone');
@@ -61,50 +63,48 @@ async function showCarsInTable() {
         })
 }
 
-async function showFilteredItems() {
+async function fetchFilteredItems () {
     tableAddContent.innerHTML = '';
-    return fetch('https://raw.githubusercontent.com/Ficko0/SEDC_HOMEWORKS/main/Advanced%20JS%20Homeworks/cars.json')
-        .then(data => data.json())
-        .then(res => {
-            let byType = res.filter(car => car.type === selectorByType.value);
-            let byBrand = res.filter(car => car.brand === selectorByBrand.value);
-            let byGas = res.filter(car => car.gasType === selectorByGasType.value);
-            let byDoors = res.filter (car => car.doors.toString() === selectorByDoors.value);
-            let byColor = res.filter (car => car.color === selectorByColor.value);
-            let byAge;
-            createTable();
-            if (selectorByType.value === '' && selectorByBrand.value === '' && selectorByColor.value === '' && selectorByDoors.value === '' && selectorByGasType.value === '') {
-                dangerDiv.style.display = 'block';
-                tableAddContent.innerHTML = '';
-            }
+    const response = await fetch ('https://raw.githubusercontent.com/Ficko0/SEDC_HOMEWORKS/main/Advanced%20JS%20Homeworks/cars.json');
+    const cars = await response.json()
+    createTable();
 
-            if (selectorByType.value !== '') {
-                byType.map (car => createBody(car));
-            }
+    let filteredItems = cars.filter (car => (!selectorByType.value || car.type === selectorByType.value)
+                                         && (!selectorByBrand.value || car.brand === selectorByBrand.value));
 
-            if (selectorByBrand.value !== '') {
-                byBrand.map (car => createBody(car));
-            }
+    const filterByDoors = selectorByDoors.value;
+    if (filterByDoors !== '') {
+        filteredItems = filteredItems.filter (car => car.doors == filterByDoors);
+    }
 
-            if (selectorByGasType.value !== '') {
-                byGas.map (car => createBody(car));
-            }
+    const filterByGasType = selectorByGasType.value;
+    if (filterByGasType !== '') {
+        filteredItems = filteredItems.filter (car => car.gasType == filterByGasType);
+    }
 
-            if (selectorByDoors.value !== '') {
-                byDoors.map (car => createBody(car));
-            }
+    const filterByColor = selectorByColor.value;
+    if (filterByColor !== '') {
+        filteredItems = filteredItems.filter (car => car.color == filterByColor);
+    }
 
-            if (selectorByColor.value !== '') {
-                byColor.map (car => createBody(car));
-            }
+    filteredItems = filteredItems.filter (car => {
+        if (isNew.checked && car.isNew) {
+            return true;
+        }
+        if (isOld.checked && !car.isNew) {
+            return true;
+        }
+        if (!isNew.checked && !isOld.checked) {
+            return true;
+        }
+    })
 
-            if (isNew.checked && isNew.value == true) {
-                byAge.filter (car => car.isNew == isNew.value).map (car => createBody(car));
-            }
-            if (isOld.checked && isOld.value == false) {
-                byAge.filter (car => car.isNew == isOld.value).map (car => createBody(car));
-            }
-        })
+    const filterByHorsePower = horsePowerRange.value;
+    if (filterByHorsePower !== '') {
+        filteredItems = filteredItems.filter (car => car.horsepower == parseInt(filterByHorsePower));
+    }
+
+    filteredItems.map(car => createBody(car));
 }
 
 async function searchModel () {
@@ -112,7 +112,8 @@ async function searchModel () {
     return fetch ('https://raw.githubusercontent.com/Ficko0/SEDC_HOMEWORKS/main/Advanced%20JS%20Homeworks/cars.json')
         .then (data => data.json())
             .then (res => {
-                let searchInput = res.filter (car => car.model.toLowerCase() === searchBar.value.toLowerCase() || car.brand.toLowerCase() === searchBar.value.toLowerCase());
+                let searchValue = searchBar.value;
+                let searchInput = res.filter (car => car.model.toLowerCase() === searchValue.toLowerCase() || car.brand.toLowerCase() === searchValue.toLowerCase());
 
                 if (searchBar.value === '') {
                     dangerDiv.style.display = 'block';
@@ -130,14 +131,9 @@ searchBtn.addEventListener('click', async () => {
     await searchModel();
 })
 
-filteredResultsBtn.addEventListener('click', async () => {
-    tableAddContent.style.display = 'block';
-    await showFilteredItems();
-})
-
 showCarsButton.addEventListener('click', async () => {
     tableAddContent.style.display = 'block';
-    await showCarsInTable();
+    await fetchFilteredItems();
 })
 
 hideCarsButton.addEventListener('click', async () => {
@@ -147,7 +143,6 @@ hideCarsButton.addEventListener('click', async () => {
 })
 
 refreshPage.addEventListener('click', async () => {
-    tableAddContent.innerHTML = '';
-    tableAddContent.style.display = 'none';
-    dangerDiv.style.display = 'none';
+    tableAddContent.style.display = 'block';
+    await showCarsInTable();
 })

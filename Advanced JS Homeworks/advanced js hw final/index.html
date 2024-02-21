@@ -48,7 +48,6 @@
         <div class="padding">
             <button type="button" class="btn btn-dark showCars">Show Table</button>
             <button type="button" class="btn btn-dark hideCars">Hide Table</button>
-            <button type="button" class="btn btn-dark showFilteredResults">Show Filtered Results</button>
         </div>
         <div class="selectors">
             <div class="flexRow">
@@ -109,8 +108,10 @@
                     <option class="optionSelectDoors" value="Orange">Orange</option>
                     <option class="optionSelectDoors" value="Purple">Purple</option>
                 </select>
-                <input class="form-check-input" type="checkbox" value="true" id="isNew" placeholder="">New
-                <input class="form-check-input" type="checkbox" value="false" id="isOld" placeholder="">Old
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="isNew">New
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="isOld">Old
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="both">Both
+                <input type="number" id="horsePowerRange" class="form-control" placeholder="HorsePower">
             </div>
         </div>
     </div>
