@@ -68,7 +68,7 @@ async function fetchFilteredItems () {
     const response = await fetch ('https://raw.githubusercontent.com/Ficko0/SEDC_HOMEWORKS/main/Advanced%20JS%20Homeworks/cars.json');
     const cars = await response.json()
     createTable();
-
+    
     let filteredItems = cars.filter (car => (!selectorByType.value || car.type === selectorByType.value)
                                          && (!selectorByBrand.value || car.brand === selectorByBrand.value));
 
