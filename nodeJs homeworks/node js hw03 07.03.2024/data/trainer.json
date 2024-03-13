@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Martin",
+        "lastName": "Hristov",
+        "email": "martin.hristov@gmail.com",
+        "isCurrentlyTeaching": true,
+        "timeEmployed": "2 years",
+        "coursesFinishedCount": 2,
+        "id": "7bfad48e-d919-48d8-bfdd-372a235a0199"
+    },
+    {
+        "name": "Ivan",
+        "lastName": "Jamandilovski",
+        "email": "ivan.jamandilovski@gmail.com",
+        "isCurrentlyTeaching": false,
+        "timeEmployed": "3 years",
+        "coursesFinishedCount": 15,
+        "id": "6fff3388-91af-4f7c-a955-09a0a09c684b"
+    },
+    {
+        "name": "Ivo",
+        "lastName": "Kostovski",
+        "email": "ivo.kostovski@gmail.com",
+        "isCurrentlyTeaching": true,
+        "timeEmployed": "8 years",
+        "coursesFinishedCount": 200,
+        "id": "2113bf73-dc65-4253-bbdf-bb34be107cc6"
+    },
+    {
+        "name": "Ivan",
+        "lastName": "Apostolovski",
+        "email": "ivanApostolovski@hotmail.com",
+        "isCurrentlyTeaching": true,
+        "timeEmployed": "2 years",
+        "coursesFinishedCount": 20,
+        "id": "bdb63792-d940-433f-9df7-f1da79c8a607"
+    },
+    {
+        "name": "Danilo",
+        "lastName": "Borozan",
+        "email": "danilo.borozan@outlook.com",
+        "isCurrentlyTeaching": true,
+        "timeEmployed": "4 years",
+        "coursesFinishedCount": 30,
+        "id": "157354ba-6862-453a-bb07-5b983a550c83"
+    }
+]

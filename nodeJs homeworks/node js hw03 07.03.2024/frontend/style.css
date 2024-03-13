@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.headLine {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.random {
+    padding: 1.5rem;
+}
+
+.toWrite h1 {
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
