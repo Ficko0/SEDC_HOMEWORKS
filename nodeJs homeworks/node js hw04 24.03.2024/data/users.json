@@ -1,0 +1,20 @@
+[
+  {
+    "username": "ivokostovski@gmail.com",
+    "password": "$2b$10$WtfjSupGll72OyvUODYNF.5x7LgZUfRfi22aGzcQwBdMxJuLwqvVO",
+    "id": "9fdc9070-231a-4e6e-8b32-901df5358682",
+    "created": "2024-03-25T09:41:00.628Z"
+  },
+  {
+    "username": "ficozlatanovski@gmail.com",
+    "password": "$2b$10$LdVlkZAQ7g67l6YZbjQcYOrsVc/dglVv.u2SECBF2yGvEcCnISHzS",
+    "id": "1d0a843d-d0eb-4047-89da-171da94de6d8",
+    "created": "2024-03-25T09:46:27.946Z"
+  },
+  {
+    "username": "johndoe@gmail.com",
+    "password": "$2b$10$fAdmTbA33Hjt02/3J8W7I./rlqKftaVVLTFRYQX6omRmDHI39Goca",
+    "id": "15cdda9b-c799-4fd5-9cc4-97d7631302e2",
+    "created": "2024-03-25T16:12:04.245Z"
+  }
+]

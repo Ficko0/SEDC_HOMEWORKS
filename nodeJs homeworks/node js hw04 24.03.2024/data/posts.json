@@ -1,0 +1,24 @@
+[
+  {
+    "content": "random post",
+    "userId": "15cdda9b-c799-4fd5-9cc4-97d7631302e2",
+    "id": "d6a9bdad-bd07-42a2-aa18-a1a5775df58b",
+    "created": "2024-03-27T11:16:09.905Z",
+    "updated": "2024-03-27T11:16:36.325Z"
+  },
+  {
+    "title": "John Doe's post 03",
+    "content": "random post",
+    "userId": "15cdda9b-c799-4fd5-9cc4-97d7631302e2",
+    "id": "320bd1e8-f620-4d2d-87ee-c10a3c823ddc",
+    "created": "2024-03-27T11:20:35.550Z"
+  },
+  {
+    "content": "random post",
+    "userId": "15cdda9b-c799-4fd5-9cc4-97d7631302e2",
+    "id": "280087b5-bb33-49bb-9846-01eeafddaf9c",
+    "created": "2024-03-27T18:50:55.559Z",
+    "updated": "2024-03-27T18:53:55.758Z",
+    "title": "John Doe's post 02"
+  }
+]
