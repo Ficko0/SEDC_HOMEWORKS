@@ -14,7 +14,8 @@ const adopterSchema = new Schema({
         {
             type: Schema.Types.ObjectId,
             ref: 'animals',
-        }]
+        }
+    ]
 },
     {
         timestamps: true
