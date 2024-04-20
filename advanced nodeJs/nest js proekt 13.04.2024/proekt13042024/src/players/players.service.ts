@@ -15,19 +15,9 @@ export class PlayersService {
   ) {}
 
   async getPlayers(): Promise<Player[]> {
-    return this.playerRepository.find();
-    // let filteredPlayers = [...this.players];
-    // if (query.position) {
-    //   filteredPlayers = filteredPlayers.filter(
-    //     (player) => player.position === position,
-    //   );
-    // }
-    // if (query.country) {
-    //   filteredPlayers = filteredPlayers.filter(
-    //     (player) => player.country === country,
-    //   );
-    // }
-    // return filteredPlayers;
+    return this.playerRepository.find({
+      relations: ['club'],
+    });
   }
 
   async getPlayer(id: string): Promise<Player> {
@@ -46,23 +36,9 @@ export class PlayersService {
     const updatedPlayer = this.playerRepository.merge(player, body);
 
     return this.playerRepository.save(updatedPlayer);
-    // const index = this.players.findIndex((player) => player.id === id);
-
-    // if (index < 0) {
-    //   throw new NotFoundException(`Player with ID: ${id} doesn't exist.`);
-    // }
-
-    // this.players[index] = {
-    //   ...this.players[index],
-    //   ...body,
-    //   updatedAt: new Date(),
-    // };
-
-    // return this.players[index];
   }
 
   async deletePlayer(id: string): Promise<void> {
-    await this.playerRepository.delete(id)
-    // this.players = this.players.filter((player) => player.id !== id);
+    await this.playerRepository.delete(id);
   }
 }

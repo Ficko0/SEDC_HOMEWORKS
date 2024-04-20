@@ -1,11 +1,5 @@
 import { Transform } from 'class-transformer';
-import {
-  IsNotEmpty,
-  IsString,
-  MaxLength,
-  IsInt,
-  Min,
-} from 'class-validator';
+import { IsNotEmpty, IsString, MaxLength, IsInt, Min, IsDateString } from 'class-validator';
 
 export class ClubCreateDTO {
   @IsString()
@@ -37,7 +31,4 @@ export class ClubCreateDTO {
   @IsInt()
   @Min(0)
   draws: number = 0;
-
-  
-  foundedAt: Date;
 }
