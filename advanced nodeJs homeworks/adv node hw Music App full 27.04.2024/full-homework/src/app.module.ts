@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { PlayersModule } from './players/players.module';
-import { ClubsModule } from './clubs/clubs.module';
+import { ArtistModule } from './artist/artist.module';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
+import { SongsModule } from './songs/songs.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -11,8 +11,8 @@ import { AuthModule } from './auth/auth.module';
       isGlobal: true,
     }),
     DatabaseModule,
-    PlayersModule,
-    ClubsModule,
+    ArtistModule,
+    SongsModule,
     AuthModule,
   ],
   controllers: [],
