@@ -1,3 +1,4 @@
+import { Transform } from 'class-transformer';
 import {
   IsBoolean,
   IsEmail,
@@ -14,10 +15,12 @@ import { JobPayType } from 'src/common/enums/pay-type.enum';
 export class CreateEmployeeDTO {
   @IsString()
   @IsNotEmpty()
+  @Transform(({value}) => value.trim())
   name: string;
 
   @IsEmail()
   @IsNotEmpty()
+  @Transform(({value}) => value.trim())
   email: string;
 
   @IsInt()
@@ -42,5 +45,6 @@ export class CreateEmployeeDTO {
 
   @IsUUID()
   @IsOptional()
+  @Transform(({value}) => value.trim())
   departmentId?: string;
 }

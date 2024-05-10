@@ -1,3 +1,4 @@
+import { Transform } from 'class-transformer';
 import {
   IsBoolean,
   IsEnum,
@@ -15,6 +16,7 @@ export class CreateDepartmentDTO {
 
   @IsOptional()
   @IsString()
+  @Transform(({value}) => value.trim())
   description?: string;
 
   @IsBoolean()
@@ -23,6 +25,7 @@ export class CreateDepartmentDTO {
 
   @IsString()
   @IsNotEmpty()
+  @Transform(({value}) => value.trim())
   officeLocation: string;
 
   @IsInt()

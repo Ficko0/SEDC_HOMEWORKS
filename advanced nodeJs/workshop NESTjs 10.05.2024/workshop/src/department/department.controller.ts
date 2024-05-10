@@ -7,6 +7,8 @@ import {
   Post,
   Put,
   Query,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { DepartmentService } from './department.service';
 import { Department } from './department.entity';
@@ -14,6 +16,13 @@ import { CreateDepartmentDTO } from './departmentDto/create-department.dto';
 import { UpdateDepartmentDTO } from './departmentDto/update-department.dto';
 import { QueryDepartmentDTO } from './departmentDto/query-department.dto';
 
+@UsePipes(
+  new ValidationPipe({
+    whitelist: true,
+    forbidUnknownValues: true,
+    transform: true,
+  }),
+)
 @Controller('department')
 export class DepartmentController {
   constructor(private readonly departmentService: DepartmentService) {}

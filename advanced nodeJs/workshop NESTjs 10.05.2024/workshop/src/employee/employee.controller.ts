@@ -7,6 +7,8 @@ import {
   Post,
   Put,
   Query,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.entity';
@@ -14,6 +16,13 @@ import { CreateEmployeeDTO } from './employeeDto/create-employee.dto';
 import { UpdateEmployeeDTO } from './employeeDto/update-employee.dto';
 import { QueryEmployeeDTO } from './employeeDto/query-employee.dto';
 
+@UsePipes(
+  new ValidationPipe({
+    whitelist: true,
+    forbidUnknownValues: true,
+    transform: true,
+  }),
+)
 @Controller('employee')
 export class EmployeeController {
   constructor(private readonly employeeService: EmployeeService) {}
