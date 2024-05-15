@@ -1,18 +1,33 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Song } from './song.entity';
-import { Repository } from 'typeorm';
+import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 import { CreateSongDTO } from './songsDto/create-song.dto';
 import { UpdateSongDTO } from './songsDto/update-song.dto';
+import { QuerySongsDTO } from './songsDto/query-song.dto';
 
 @Injectable()
 export class SongsService {
   constructor(@InjectRepository(Song) private songRepo: Repository<Song>) {}
 
-  async getSongs(): Promise<Song[]> {
+  async getSongs({ name }: QuerySongsDTO): Promise<Song[]> {
+    let query = {} satisfies FindOptionsWhere<Song>;
+
+    if (name) {
+      query = {
+        ...query,
+        name: ILike(`%${name}%`),
+      };
+    }
+
     return this.songRepo.find({
+      where: query,
+      order: {
+        duration: 'ASC',
+      },
       relations: {
         artist: true,
+        album: true,
       },
     });
   }

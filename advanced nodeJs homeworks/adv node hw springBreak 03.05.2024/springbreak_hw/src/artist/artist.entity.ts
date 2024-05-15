@@ -1,16 +1,13 @@
-import { Album } from 'src/albums/album.entity';
+import { ApiProperty } from '@nestjs/swagger';
+import { Album } from 'src/albums/albums.entity';
 import { Song } from 'src/songs/song.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
-  ManyToOne,
   OneToMany,
-  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
-  JoinColumn,
-  PrimaryColumn,
 } from 'typeorm';
 
 @Entity()
@@ -18,16 +15,31 @@ export class Artist {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @ApiProperty({
+    type: String,
+    description: 'The name of the artist',
+    example: 'Drake',
+  })
   @Column({
     type: String,
   })
   name: string;
 
+  @ApiProperty({
+    type: Number,
+    description: 'The age of the artist',
+    example: 20,
+  })
   @Column({
     type: Number,
   })
   age: number;
 
+  @ApiProperty({
+    type: String,
+    description: 'The country of the artist',
+    example: 'Macedonia',
+  })
   @Column({
     type: String,
   })
@@ -36,7 +48,7 @@ export class Artist {
   @OneToMany(() => Song, (songs) => songs.artist)
   songs: Song[];
 
-  @OneToMany(() => Album, (album) => album.artist)
+  @OneToMany(() => Album, (albums) => albums.artist)
   albums: Album[];
 
   @CreateDateColumn()

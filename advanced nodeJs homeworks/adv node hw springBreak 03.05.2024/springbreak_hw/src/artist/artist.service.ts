@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Artist } from './artist.entity';
-import { Repository } from 'typeorm';
+import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 import { CreateArtistDTO } from './artistDto/create-artist.dto';
 import { UpdateArtistDTO } from './artistDto/update-artist.dto';
+import { QueryArtistDTO } from './artistDto/query-artist.dto';
 
 @Injectable()
 export class ArtistService {
@@ -11,8 +12,18 @@ export class ArtistService {
     @InjectRepository(Artist) private artistRepo: Repository<Artist>,
   ) {}
 
-  async getArtists(): Promise<Artist[]> {
+  async getArtists({ name }: QueryArtistDTO): Promise<Artist[]> {
+    let query = {} satisfies FindOptionsWhere<Artist>;
+
+    if (name) {
+      query = {
+        ...query,
+        name: ILike(`%${name}%`),
+      };
+    }
+
     return this.artistRepo.find({
+      where: query,
       relations: {
         songs: true,
         albums: true,
