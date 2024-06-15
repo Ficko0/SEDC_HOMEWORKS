@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "continent": "Asia",
+    "countryName": "Japan",
+    "capitalCity": "Tokyo",
+    "description": "An island nation in East Asia known for its rich culture and technological advancements."
+  },
+  {
+    "id": 2,
+    "continent": "Europe",
+    "countryName": "France",
+    "capitalCity": "Paris",
+    "description": "A European country famous for its art, cuisine, and the Eiffel Tower."
+  },
+  {
+    "id": 3,
+    "continent": "Africa",
+    "countryName": "Nigeria",
+    "capitalCity": "Abuja",
+    "description": "The most populous country in Africa, known for its diverse culture and economy."
+  },
+  {
+    "id": 4,
+    "continent": "Americas",
+    "countryName": "Canada",
+    "capitalCity": "Ottawa",
+    "description": "The second largest country in the world by land area, known for its natural beauty and multicultural cities."
+  },
+  {
+    "id": 5,
+    "continent": "Americas",
+    "countryName": "Brazil",
+    "capitalCity": "Brasília",
+    "description": "The largest country in South America, famous for its Amazon rainforest and Carnival festival."
+  },
+  {
+    "id": 6,
+    "continent": "Oceania",
+    "countryName": "Australia",
+    "capitalCity": "Canberra",
+    "description": "A country and continent known for its unique wildlife and landmarks like the Sydney Opera House."
+  },
+  {
+    "id": 7,
+    "continent": "Europe",
+    "countryName": "Germany",
+    "capitalCity": "Berlin",
+    "description": "A leading European country known for its history, culture, and economic strength."
+  },
+  {
+    "id": 8,
+    "continent": "Asia",
+    "countryName": "China",
+    "capitalCity": "Beijing",
+    "description": "The most populous country in the world, known for its ancient civilization and rapid modernization."
+  },
+  {
+    "id": 9,
+    "continent": "Africa",
+    "countryName": "South Africa",
+    "capitalCity": "Pretoria",
+    "description": "A diverse country at the southern tip of Africa known for its landscapes and cultural heritage."
+  },
+  {
+    "id": 10,
+    "continent": "Europe",
+    "countryName": "Italy",
+    "capitalCity": "Rome",
+    "description": "A country in Southern Europe known for its rich history, art, and cuisine."
+  },
+  {
+    "id": 11,
+    "continent": "Americas",
+    "countryName": "United States",
+    "capitalCity": "Washington, D.C.",
+    "description": "A large country in North America known for its diverse culture and global influence."
+  },
+  {
+    "id": 12,
+    "continent": "Asia",
+    "countryName": "India",
+    "capitalCity": "New Delhi",
+    "description": "A populous country in South Asia known for its rich history, culture, and economy."
+  },
+  {
+    "id": 13,
+    "continent": "Europe",
+    "countryName": "United Kingdom",
+    "capitalCity": "London",
+    "description": "A country in Europe known for its historical landmarks and cultural influence."
+  },
+  {
+    "id": 14,
+    "continent": "Asia",
+    "countryName": "South Korea",
+    "capitalCity": "Seoul",
+    "description": "A technologically advanced country in East Asia known for its pop culture and history."
+  },
+  {
+    "id": 15,
+    "continent": "Americas",
+    "countryName": "Argentina",
+    "capitalCity": "Buenos Aires",
+    "description": "A country in South America known for its tango music and dance, and vibrant culture."
+  },
+  {
+    "id": 16,
+    "continent": "Africa",
+    "countryName": "Egypt",
+    "capitalCity": "Cairo",
+    "description": "A country in North Africa known for its ancient civilization and monuments like the pyramids."
+  },
+  {
+    "id": 17,
+    "continent": "Europe",
+    "countryName": "Spain",
+    "capitalCity": "Madrid",
+    "description": "A country in Southern Europe known for its vibrant culture, art, and festivals."
+  },
+  {
+    "id": 18,
+    "continent": "Americas",
+    "countryName": "Mexico",
+    "capitalCity": "Mexico City",
+    "description": "A country in North America known for its rich cultural heritage and cuisine."
+  },
+  {
+    "id": 19,
+    "continent": "Asia",
+    "countryName": "Indonesia",
+    "capitalCity": "Jakarta",
+    "description": "An archipelago in Southeast Asia known for its diverse culture and beautiful islands."
+  },
+  {
+    "id": 20,
+    "continent": "Europe",
+    "countryName": "Russia",
+    "capitalCity": "Moscow",
+    "description": "The largest country in the world, known for its rich history and cultural heritage."
+  }
+]
