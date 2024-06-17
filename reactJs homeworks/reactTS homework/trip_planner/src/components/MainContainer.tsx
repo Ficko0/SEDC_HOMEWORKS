@@ -23,7 +23,9 @@ export default function MainContainer() {
           .filter((country) => {
             return search.toLowerCase() === ""
               ? country
-              : country.countryName.toLowerCase().includes(search);
+              : country.countryName
+                  .toLowerCase()
+                  .includes(search.toLowerCase());
           })
           .map((country) => (
             <CountryCard country={country} />
