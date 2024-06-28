@@ -1,14 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import { Continent } from "../common/enum/continent.enum";
-import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import {
+  GlobeEuropeAfricaIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/react/24/outline";
+import { useContext } from "react";
+import { CountryContext } from "../context/country.context";
 
 export default function Header() {
   const regionName = Object.values(Continent);
+  const { tripItemsCount } = useContext(CountryContext);
 
   return (
     <header className="flex mx-5 my-5 justify-between items-center bg-sky-700 rounded-xl">
       <h1 className="text-4xl font-bold py-4 ml-10 text-white hover:text-gray-400 transition">
-        <Link to={"/"}>Trip Planer</Link>
+        <Link to={"/"}>Trip Planner</Link>
       </h1>
       <div className="flex mx-5 justify-center items-center bg-sky-700 py-4 px-4 rounded-xl">
         <nav>
@@ -38,10 +44,15 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className="mr-10 flex items-center justify-center">
+      <div className="mr-10 flex flex-nowrap gap-x-7 items-center justify-center">
         <Link to="/trip" className="ml-20">
-          <span className="bg-red-600 rounded-full px-2 text-s mr-2">10</span>
           <PaperAirplaneIcon className="size-7" />
+          <span className="bg-red-600 rounded-full px-2 text-s mr-2">
+            {tripItemsCount}
+          </span>
+        </Link>
+        <Link to="/view-trips">
+          <GlobeEuropeAfricaIcon className="size-7" />
         </Link>
       </div>
     </header>

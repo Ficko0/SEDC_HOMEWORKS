@@ -27,7 +27,7 @@ export default function MainContainer() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="grid grid-cols-4 items-center justify-center w-full">
+      <div className="grid grid-cols-4 justify-center place-content-center mx-10">
         {filteredCountries.map((country) => (
           <CountryCard country={country} />
         ))}

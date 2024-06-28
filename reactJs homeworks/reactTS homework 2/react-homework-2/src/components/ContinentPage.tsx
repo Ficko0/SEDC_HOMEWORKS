@@ -33,7 +33,7 @@ export default function ContinentPage() {
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap justify-center items-center w-full">
+      <div className="grid grid-cols-4 place-content-center justify-center mx-10">
         {countries.map((country) => (
           <CountryCard country={country} />
         ))}
