@@ -12,6 +12,8 @@ type CountryContextType = {
   isLoading: boolean;
   tripItems: TripItem[];
   tripItemsCount: number;
+  search: string;
+  handleInputChange: (e: any) => void;
   handleQuantityChange: (country: string, typeOfChange: "+" | "-") => void;
   handleAddToTripPlan: (country: Country) => void;
   handleRemoveTripItems: () => void;
@@ -22,6 +24,8 @@ const defaultValues: CountryContextType = {
   isLoading: false,
   tripItems: [],
   tripItemsCount: 0,
+  search: "",
+  handleInputChange: () => {},
   handleQuantityChange: () => {},
   handleAddToTripPlan: () => {},
   handleRemoveTripItems: () => {},
@@ -34,11 +38,14 @@ export default function CountryProvider({
 }: CountryContextProviderType) {
   const [country, setCountry] = useState<Country[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const localStorageExists = Boolean(localStorage.getItem('tripItems')) 
+  const localStorageExists = Boolean(localStorage.getItem("tripItems"));
   const [tripItems, setTripItems] = useState<TripItem[]>(
-  localStorageExists ? JSON.parse(localStorage.getItem("tripItems") as string) : []
+    localStorageExists
+      ? JSON.parse(localStorage.getItem("tripItems") as string)
+      : []
   );
   const [tripItemsCount, setTripItemsCount] = useState(0);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -50,9 +57,20 @@ export default function CountryProvider({
   }, []);
 
   useEffect(() => {
+    axios
+      .get(`https://restcountries.com/v3.1/name/${search}`)
+      .then((res) => setSearch(res.data))
+      .catch((err) => console.log(`Error: ${err}`));
+  }, [search]);
+
+  useEffect(() => {
     localStorage.setItem("tripItems", JSON.stringify(tripItems));
     setTripItemsCount(tripItems.length);
   }, [tripItems]);
+
+  const handleInputChange = (e: any) => {
+    setSearch(e.target.value);
+  };
 
   const handleQuantityChange = (country: string, typeOfChange: "+" | "-") => {
     const updatedTripItems = tripItems
@@ -75,7 +93,7 @@ export default function CountryProvider({
   };
 
   const handleAddToTripPlan = (country: Country) => {
-    console.log(tripItems)
+    console.log(tripItems);
     if (
       tripItems.some(
         (tripItem) => tripItem.country.name.common === country.name.common
@@ -104,6 +122,8 @@ export default function CountryProvider({
         isLoading,
         tripItems,
         tripItemsCount,
+        search,
+        handleInputChange,
         handleAddToTripPlan,
         handleQuantityChange,
         handleRemoveTripItems,

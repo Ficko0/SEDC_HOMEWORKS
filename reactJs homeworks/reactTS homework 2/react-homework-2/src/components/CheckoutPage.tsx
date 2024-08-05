@@ -24,7 +24,7 @@ export default function CheckoutPage() {
       })),
       address: data,
     } satisfies Partial<BookedTrip>;
-console.log(toBeBookedTrip)
+
     try {
       localStorage.setItem("bookedTrips", JSON.stringify([toBeBookedTrip]));
       navigate("/booked");

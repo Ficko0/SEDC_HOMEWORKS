@@ -1,17 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CountryContext } from "../context/country.context";
 import CountryCard from "./CountryCard";
 import LoadingIcon from "./LoadingIcon";
 
 export default function MainContainer() {
-  const { isLoading, country } = useContext(CountryContext);
-  const [search, setSearch] = useState("");
-
-  const filteredCountries = country.filter(
-    (country) =>
-      search === "" ||
-      country.name.common.toLowerCase().includes(search.toLowerCase())
-  );
+  const { isLoading, country, search, handleInputChange } =
+    useContext(CountryContext);
 
   if (isLoading) {
     return <LoadingIcon />;
@@ -24,11 +18,11 @@ export default function MainContainer() {
           type="text"
           placeholder="Search Country"
           className="p-2 rounded-xl bg-gray-300"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={() => handleInputChange}
         />
       </div>
       <div className="grid grid-cols-4 justify-center place-content-center mx-10">
-        {filteredCountries.map((country) => (
+        {country.map((country) => (
           <CountryCard country={country} />
         ))}
       </div>

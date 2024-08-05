@@ -7,7 +7,6 @@ export default function SeeBookedTrips() {
   const [bookedTrips, setBookedTrips] = useState<BookedTrip[]>([]);
 
   useEffect(() => {
-    console.log(localStorage.getItem("bookedTrips"));
     if (Boolean(localStorage.getItem("bookedTrips")))
       setBookedTrips(JSON.parse(localStorage.getItem("bookedTrips") as string));
   }, []);
