@@ -1,0 +1,262 @@
+[
+  {
+    "id": "1",
+    "description": "A sleek and powerful electric car with state-of-the-art technology.",
+    "price": 85000,
+    "images": [
+      "https://www.tesla.com/sites/default/files/modelsx-new/social/model-s-hero-social.jpg",
+      "https://www.tesla.com/sites/default/files/modelsx-new/hero/hero_model_s_2021.jpg",
+      "https://www.tesla.com/sites/default/files/modelsx-new/model_s_interior.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2023,
+    "color": "Red",
+    "fuelType": "Electric",
+    "distance": 10000,
+    "isNew": true,
+    "location": {
+      "city": "San Francisco",
+      "country": "USA"
+    },
+    "brand": "Tesla",
+    "model": "Model-S",
+    "enginePower": 670,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "2",
+    "description": "A luxurious SUV with premium features and spacious interior.",
+    "price": 95000,
+    "images": [
+      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/range-rover-lwb-model/21MY-Range-Rover-LWB-SVR-5.jpg",
+      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/21MY-Range-Rover-LWB-SVR-4.jpg",
+      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/21MY-Range-Rover-LWB-SVR-3.jpg"
+    ],
+    "type": "SUV",
+    "year": 2022,
+    "color": "Black",
+    "fuelType": "Diesel",
+    "distance": 15000,
+    "isNew": false,
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "brand": "Land Rover",
+    "model": "Range Rover Sport",
+    "enginePower": 518,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "3",
+    "description": "A compact and efficient car, perfect for city driving.",
+    "price": 20000,
+    "images": [
+      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-exterior-front.jpg",
+      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-exterior-side.jpg",
+      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-interior.jpg"
+    ],
+    "type": "Compact",
+    "year": 2021,
+    "color": "Blue",
+    "fuelType": "Petrol",
+    "distance": 25000,
+    "isNew": false,
+    "location": {
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "brand": "Honda",
+    "model": "Civic",
+    "enginePower": 180,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "4",
+    "description": "A high-performance sports car with an iconic design.",
+    "price": 150000,
+    "images": [
+      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-front.jpg",
+      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-side.jpg",
+      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-interior.jpg"
+    ],
+    "type": "Sports Car",
+    "year": 2023,
+    "color": "White",
+    "fuelType": "Petrol",
+    "distance": 5000,
+    "isNew": true,
+    "location": {
+      "city": "Stuttgart",
+      "country": "Germany"
+    },
+    "brand": "Porsche",
+    "model": "911",
+    "enginePower": 450,
+    "doors": 2,
+    "seats": 4,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "5",
+    "description": "A rugged and versatile SUV, built for off-road adventures.",
+    "price": 60000,
+    "images": [
+      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-front.jpg",
+      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-side.jpg",
+      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-interior.jpg"
+    ],
+    "type": "SUV",
+    "year": 2022,
+    "color": "Green",
+    "fuelType": "Petrol",
+    "distance": 12000,
+    "isNew": false,
+    "location": {
+      "city": "Denver",
+      "country": "USA"
+    },
+    "brand": "Jeep",
+    "model": "Wrangler",
+    "enginePower": 285,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "6",
+    "description": "A reliable and spacious family car with modern amenities.",
+    "price": 30000,
+    "images": [
+      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-front.jpg",
+      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-side.jpg",
+      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-interior.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2022,
+    "color": "Silver",
+    "fuelType": "Electric",
+    "distance": 8000,
+    "isNew": true,
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "brand": "Toyota",
+    "model": "Camry",
+    "enginePower": 203,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "7",
+    "description": "A stylish and compact SUV with impressive fuel efficiency.",
+    "price": 25000,
+    "images": [
+      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-front.jpg",
+      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-side.jpg",
+      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-interior.jpg"
+    ],
+    "type": "SUV",
+    "year": 2021,
+    "color": "Gray",
+    "fuelType": "Petrol",
+    "distance": 20000,
+    "isNew": false,
+    "location": {
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    "brand": "Mazda",
+    "model": "CX5",
+    "enginePower": 187,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "8",
+    "description": "A powerful and luxurious sports car with cutting-edge features.",
+    "price": 200000,
+    "images": [
+      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/front.jpg",
+      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/side.jpg",
+      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/interior.jpg"
+    ],
+    "type": "Sports Car",
+    "year": 2022,
+    "color": "Yellow",
+    "fuelType": "Petrol",
+    "distance": 3000,
+    "isNew": true,
+    "location": {
+      "city": "Milan",
+      "country": "Italy"
+    },
+    "brand": "Ferrari",
+    "model": "488GTB",
+    "enginePower": 661,
+    "doors": 2,
+    "seats": 2,
+    "transmission": "Automatic"
+  },
+  {
+    "id": "9",
+    "description": "A practical and affordable compact car with excellent fuel efficiency.",
+    "price": 18000,
+    "images": [
+      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-front.jpg",
+      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-side.jpg",
+      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-interior.jpg"
+    ],
+    "type": "Hatchback",
+    "year": 2021,
+    "color": "White",
+    "fuelType": "Petrol",
+    "distance": 30000,
+    "isNew": false,
+    "location": {
+      "city": "Berlin",
+      "country": "Germany"
+    },
+    "brand": "Ford",
+    "model": "Fiesta",
+    "enginePower": 120,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Manual"
+  },
+  {
+    "id": "10",
+    "description": "A luxurious sedan with advanced safety features and a smooth ride.",
+    "price": 50000,
+    "images": [
+      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-front.jpg",
+      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-side.jpg",
+      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-interior.jpg"
+    ],
+    "type": "Sedan",
+    "year": 2023,
+    "color": "Black",
+    "fuelType": "Petrol",
+    "distance": 5000,
+    "isNew": true,
+    "location": {
+      "city": "Munich",
+      "country": "Germany"
+    },
+    "brand": "Mercedes-Benz",
+    "model": "E-Class",
+    "enginePower": 255,
+    "doors": 4,
+    "seats": 5,
+    "transmission": "Automatic"
+  }
+]

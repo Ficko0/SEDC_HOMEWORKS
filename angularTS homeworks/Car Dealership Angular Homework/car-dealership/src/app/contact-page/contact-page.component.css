@@ -1,0 +1,37 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem;
+}
+
+.opening-text {
+  margin: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.email {
+  margin: 2rem;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem;
+}
+
+input {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}

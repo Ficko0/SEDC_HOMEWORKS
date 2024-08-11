@@ -1,0 +1,7 @@
+<mat-grid-list cols="2" class="grid">
+  @for (car of cars(); track car.id) {
+  <mat-grid-tile>
+    <app-car-card [car]="car" />
+  </mat-grid-tile>
+  }
+</mat-grid-list>

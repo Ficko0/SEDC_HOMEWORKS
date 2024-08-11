@@ -1,0 +1,11 @@
+<div>
+  <h1>Styles Component</h1>
+  <h2>Styles with CSS classes</h2>
+  <p class="bg-red text-yellow">This is a red box</p>
+  <p [class.bg-blue]="random > 5">Condtional blue background</p>
+  <h3>Random Value: {{ random }}</h3>
+  <p [class.color]="random > 5 ? 'yellow' : 'pink'">Condtional text color</p>
+  <p [ngClass]="{
+    'bg-green' : random > 5
+  }">Using ngClass</p>
+</div>

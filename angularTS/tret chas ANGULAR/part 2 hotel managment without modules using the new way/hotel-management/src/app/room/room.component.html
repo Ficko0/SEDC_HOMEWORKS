@@ -1,0 +1,88 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>
+      {{ room()?.name }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ room()?.type }} | ${{ room()?.pricePerNight }}/night
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="card-image">
+    <img
+      mat-card-image
+      [src]="room()?.images"
+      [alt]="room()?.name"
+      height="auto"
+      width="100%"
+    />
+  </div>
+
+  <mat-card-content>
+    <p>
+      {{ room()?.description }}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button [matBadge]="room()?.beds" mat-fab matBadgeColor="primary">
+      <mat-icon fontIcon="beds" />
+    </button>
+
+    <button
+      *ngIf="!!room()?.extraBeds"
+      mat-fab
+      [matBadge]="room()?.extraBeds"
+      matBadgeColor="primary"
+    >
+      <mat-icon fontIcon="single_bed"></mat-icon>
+    </button>
+    <button mat-fab [matBadge]="room()?.guestCapacity" matBadgeColor="primary">
+      <mat-icon fontIcon="groups" />
+    </button>
+    <button mat-fab [matBadge]="room()?.baths" matBadgeColor="primary">
+      <mat-icon fontIcon="bathtub" />
+    </button>
+    <button
+      *ngIf="!!room()?.hasAirConditioning"
+      mat-fab
+      matBadgeColor="primary"
+    >
+      <mat-icon fontIcon="ac_unit"></mat-icon>
+    </button>
+    <button *ngIf="!!room()?.isPetFriendly" mat-fab matBadgeColor="primary">
+      <!-- 2 !! of these is the same as a Boolean constructor -->
+      <mat-icon fontIcon="pets"></mat-icon>
+    </button>
+    <button
+      *ngIf="room()?.parking !== ParkingType.None"
+      mat-fab
+      [matTooltip]="room()?.parking + ' Parking'"
+    >
+      <mat-icon fontIcon="local_parking" />
+    </button>
+    <button
+      *ngIf="room()?.board !== Board.None"
+      mat-fab
+      [matTooltip]="room()?.board!"
+    >
+      <mat-icon fontIcon="dinner_dining" />
+    </button>
+
+    @if (room()?.view === RoomView.Sea) {
+    <button mat-fab [matTooltip]="room()?.view! + ' View'">
+      <mat-icon fontIcon="ocean" />
+    </button>
+    } @else if (room()?.view === RoomView.Garden) {
+
+    <button mat-fab [matTooltip]="room()?.view! + ' View'">
+      <mat-icon fontIcon="nature" />
+    </button>
+    } @else if (room()?.view === RoomView.Pool) {
+
+    <button mat-fab [matTooltip]="room()?.view! + ' View'">
+      <mat-icon fontIcon="pool" />
+    </button>
+    }
+  </mat-card-actions>
+</mat-card>
