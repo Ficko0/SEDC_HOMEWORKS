@@ -8,6 +8,14 @@
       <p class="price">${{ car()?.price }}</p>
     </mat-card-subtitle>
   </mat-card-header>
+  <div class="container">
+    <img
+      [src]="car()?.images"
+      [alt]="car()?.brand"
+      width="100%"
+      height="auto"
+    />
+  </div>
   <mat-card-content>
     <p>{{ car()?.description }}</p>
     <p><b>Mileage:</b> {{ car()?.distance }}km</p>

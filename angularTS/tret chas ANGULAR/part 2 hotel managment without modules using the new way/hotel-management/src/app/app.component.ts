@@ -14,8 +14,9 @@ import { HeaderComponent } from './header/header.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  // App Component is the smart component. It wraps all the other components.
   rooms = signal<Room[]>([...(roomJson as Room[])]);
-  selectedPage = signal<'home' | 'room'>('room');
+  selectedPage = signal<'home' | 'room'>('home');
 
   handleSelectedPage(value: 'home' | 'room') {
     this.selectedPage.update(() => value);

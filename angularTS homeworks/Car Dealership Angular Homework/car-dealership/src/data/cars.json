@@ -4,9 +4,7 @@
     "description": "A sleek and powerful electric car with state-of-the-art technology.",
     "price": 85000,
     "images": [
-      "https://www.tesla.com/sites/default/files/modelsx-new/social/model-s-hero-social.jpg",
-      "https://www.tesla.com/sites/default/files/modelsx-new/hero/hero_model_s_2021.jpg",
-      "https://www.tesla.com/sites/default/files/modelsx-new/model_s_interior.jpg"
+      "https://hips.hearstapps.com/hmg-prod/images/2024-tesla-model-s-107-6572200e43fa1.jpg?crop=0.586xw:0.496xh;0.204xw,0.271xh&resize=2048:*"
     ],
     "type": "Sedan",
     "year": 2023,
@@ -30,9 +28,7 @@
     "description": "A luxurious SUV with premium features and spacious interior.",
     "price": 95000,
     "images": [
-      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/range-rover-lwb-model/21MY-Range-Rover-LWB-SVR-5.jpg",
-      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/21MY-Range-Rover-LWB-SVR-4.jpg",
-      "https://www.landrover.com/content/dam/landrover/vehicles/range-rover/21MY-Range-Rover-LWB-SVR-3.jpg"
+      "https://media.cdn-jaguarlandrover.com/api/v2/images/101889/w/1600.jpg"
     ],
     "type": "SUV",
     "year": 2022,
@@ -56,9 +52,7 @@
     "description": "A compact and efficient car, perfect for city driving.",
     "price": 20000,
     "images": [
-      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-exterior-front.jpg",
-      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-exterior-side.jpg",
-      "https://www.honda.com/content/dam/honda/na/vehicles/civic/2022/gallery/2022-honda-civic-sedan-interior.jpg"
+      "https://edgecast-img.yahoo.net/mysterio/api/6967915E610AF9F9F2B7361990E00E2D6144EE8BA3795D21F34D5E1D5E4CF6CB/autoblog/resizefill_w1200_h675;quality_85;format_webp;cc_31536000;/https://s.aolcdn.com/os/ab/_cms/2022/10/19200114/Honda-Civic-Sport-Touring.jpg"
     ],
     "type": "Compact",
     "year": 2021,
@@ -82,9 +76,7 @@
     "description": "A high-performance sports car with an iconic design.",
     "price": 150000,
     "images": [
-      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-front.jpg",
-      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-side.jpg",
-      "https://www.porsche.com/content/dam/porsche/usa/2022/911/2022-porsche-911-gallery-interior.jpg"
+      "https://images.pistonheads.com/nimg/47627/mceu_92714459611694185139788.jpg"
     ],
     "type": "Sports Car",
     "year": 2023,
@@ -108,9 +100,7 @@
     "description": "A rugged and versatile SUV, built for off-road adventures.",
     "price": 60000,
     "images": [
-      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-front.jpg",
-      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-side.jpg",
-      "https://www.jeep.com/content/dam/jeep/vehicles/wrangler/2023/2023-jeep-wrangler-interior.jpg"
+      "https://media.ed.edmunds-media.com/jeep/wrangler/2024/oem/2024_jeep_wrangler_convertible-suv_rubicon-392-final-edition_fq_oem_1_1600.jpg"
     ],
     "type": "SUV",
     "year": 2022,
@@ -134,9 +124,7 @@
     "description": "A reliable and spacious family car with modern amenities.",
     "price": 30000,
     "images": [
-      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-front.jpg",
-      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-side.jpg",
-      "https://www.toyota.com/content/dam/toyota/vehicles/camry/2023/toyota-camry-2023-interior.jpg"
+      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202201/2022_Toyota_Camry_Hybrid-_Exte.jpg"
     ],
     "type": "Sedan",
     "year": 2022,
@@ -160,9 +148,7 @@
     "description": "A stylish and compact SUV with impressive fuel efficiency.",
     "price": 25000,
     "images": [
-      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-front.jpg",
-      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-side.jpg",
-      "https://www.mazda.com/content/dam/mazda/vehicles/cx-5/2021/2021-mazda-cx5-interior.jpg"
+      "https://media-assets.mazda.eu/image/upload/c_fill,w_900,h_442,q_auto,f_auto/mazdahr/globalassets/cars/2022-mazda-cx-5/content-update/220413_900_442_media_promo_high_plus22.jpg?rnd=493b3b"
     ],
     "type": "SUV",
     "year": 2021,
@@ -186,9 +172,7 @@
     "description": "A powerful and luxurious sports car with cutting-edge features.",
     "price": 200000,
     "images": [
-      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/front.jpg",
-      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/side.jpg",
-      "https://www.ferrari.com/content/dam/ferrari/vehicles/488-gtb/interior.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ferrari_488_GTB.jpg/2560px-Ferrari_488_GTB.jpg"
     ],
     "type": "Sports Car",
     "year": 2022,
@@ -212,9 +196,7 @@
     "description": "A practical and affordable compact car with excellent fuel efficiency.",
     "price": 18000,
     "images": [
-      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-front.jpg",
-      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-side.jpg",
-      "https://www.ford.com/content/dam/ford/vehicles/fiesta/2021/2021-ford-fiesta-interior.jpg"
+      "https://cdn.motor1.com/images/mgl/28rKM/s1/ford-fiesta-st-2022.jpg"
     ],
     "type": "Hatchback",
     "year": 2021,
@@ -238,9 +220,7 @@
     "description": "A luxurious sedan with advanced safety features and a smooth ride.",
     "price": 50000,
     "images": [
-      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-front.jpg",
-      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-side.jpg",
-      "https://www.mercedes-benz.com/content/dam/mercedes-benz/vehicles/e-class/2023/2023-mercedes-benz-e-class-interior.jpg"
+      "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/yumbvjpqiukmlg0q9cuw"
     ],
     "type": "Sedan",
     "year": 2023,

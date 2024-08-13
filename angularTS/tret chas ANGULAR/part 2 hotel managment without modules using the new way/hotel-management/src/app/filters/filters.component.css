@@ -1,0 +1,14 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+mat-label {
+    font-weight: 800;
+}

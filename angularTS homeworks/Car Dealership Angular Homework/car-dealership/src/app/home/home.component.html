@@ -1,4 +1,4 @@
-<mat-grid-list cols="2" class="grid">
+<mat-grid-list cols="2" class="grid" gutterSize="10rem" rowHeight="75rem">
   @for (car of cars(); track car.id) {
   <mat-grid-tile>
     <app-car-card [car]="car" />

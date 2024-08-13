@@ -5,6 +5,7 @@ header {
   flex-direction: column;
   background-color: #181f1c;
   color: whitesmoke;
+  border-radius: 0 0 1.2rem 1.2rem;
 }
 
 h1 {

@@ -1,1 +1,29 @@
-<p>home works!</p>
+<!-- 1. Search input. -->
+<app-search
+  [searchTerm]="searchTerm()"
+  (onUpdateSearchTerm)="handleSearchTerm($event)"
+/>
+
+<!-- 2. Filter  -->
+<app-filters
+  [guestCapacity]="guestCapacity()"
+  (onGuestCapacityChange)="guestCapacity.set($event)"
+  [beds]="beds()"
+  (onBedsChange)="beds.set($event)"
+  [board]="board()"
+  (onBoardChange)="board.set($event)"
+  [view]="view()"
+  (onViewChange)="view.set($event)"
+  [parking]="parking()"
+  (onParkingChange)="parking.set($event)"
+  [pricePerNight]="pricePerNight()"
+  (onPricePerNightChange)="pricePerNight.set($event)"
+  [pricePerNightTo]="pricePerNightTo()"
+  (onPricePerNightToChange)="pricePerNightTo.set($event)"
+  [hasAc]="hasAc()"
+  (onAcChange)="hasAc.set($event)"
+  [isPetFriendly]="isPetFriendly()"
+  (onIsPetFriendly)="isPetFriendly.set($event)"
+/>
+<!-- 3. results -->
+<app-rooms [rooms]="filteredRooms()" />

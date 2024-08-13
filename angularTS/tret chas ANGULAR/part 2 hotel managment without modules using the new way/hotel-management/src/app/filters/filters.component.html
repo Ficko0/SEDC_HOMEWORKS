@@ -1,0 +1,86 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Show / Hide Filters
+    </mat-expansion-panel-header>
+    <div class="filter">
+      <mat-form-field>
+        <mat-label>Guest Capacity</mat-label>
+        <input
+          type="number"
+          matInput
+          min="1"
+          max="10"
+          [ngModel]="guestCapacity()"
+          (ngModelChange)="onGuestCapacityChange.emit($event)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Beds</mat-label>
+        <input
+          type="number"
+          matInput
+          min="1"
+          max="5"
+          [ngModel]="beds()"
+          (ngModelChange)="onBedsChange.emit($event)"
+        />
+      </mat-form-field>
+      <mat-radio-group>
+        <mat-label>Board Options</mat-label>
+        @for(b of boardOptions; track b) {
+        <mat-radio-button
+          [value]="b"
+          [checked]="b === board()"
+          (click)="onBoardChange.emit(b)"
+        />
+        {{ b }}
+        }
+      </mat-radio-group>
+      <mat-radio-group>
+        <mat-label>View Options</mat-label>
+        @for(v of viewOptions; track v) {
+        <mat-radio-button
+          [value]="v"
+          [checked]="v === view()"
+          (click)="onViewChange.emit(v)"
+        />
+        {{ v }}
+        }
+      </mat-radio-group>
+      <mat-radio-group>
+        <mat-label>View Options</mat-label>
+        @for(p of parkingOptions; track p) {
+        <mat-radio-button
+          [value]="p"
+          [checked]="p === parking()"
+          (click)="onParkingChange.emit(p)"
+        />
+        {{ p }}
+        }
+      </mat-radio-group>
+      <mat-slider min="100" max="2000">
+        <input
+          matSliderStartThumb
+          [ngModel]="pricePerNight()"
+          (ngModelChange)="onPricePerNightChange.emit($event)"
+        />
+        <input
+          matSliderEndThumb
+          [ngModel]="pricePerNightTo()"
+          (ngModelChange)="onPricePerNightToChange.emit($event)"
+        />
+      </mat-slider>
+      <div>
+        <mat-checkbox [checked]="hasAc()" (click)="onAcChange.emit(!hasAc())"
+          >Air Conditioning</mat-checkbox
+        >
+        <mat-checkbox
+          [checked]="isPetFriendly()"
+          (click)="onIsPetFriendly.emit(!isPetFriendly())"
+          >Pet Friendly</mat-checkbox
+        >
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,20 +1,24 @@
 h1 {
   text-align: center;
   margin: 2rem;
+  color: whitesmoke;
 }
 
 .description {
   margin: 3rem;
   font-size: 1.1rem;
   text-align: justify;
+  color: whitesmoke;
 }
 
 h2 {
   text-align: center;
   margin: 3rem;
+  color: whitesmoke;
 }
 
 .thank-you-text {
   margin: 4rem;
   text-align: center;
+  color: whitesmoke;
 }
