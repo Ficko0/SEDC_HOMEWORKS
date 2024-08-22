@@ -1,4 +1,5 @@
 export enum CarBrand {
+  None = 'None',
   Acura = 'Acura',
   AlfaRomeo = 'Alfa Romeo',
   AstonMartin = 'Aston Martin',

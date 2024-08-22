@@ -8,22 +8,22 @@ import { TransimissionType } from './transmission.enum';
 export interface Car {
   id: string;
   description: string;
-  price: number;
+  price: number; // -
   images: string[];
-  type: CarType; //enum
-  year: number;
+  type: CarType; //enum -
+  year: number; // -
   color: Color; //enum
-  fuelType: FuelType; //enum
+  fuelType: FuelType; //enum -
   distance: number;
-  isNew: boolean;
+  isNew: boolean; // -
   location: {
     city: string;
     country: string;
   };
-  brand: CarBrand; //enum
+  brand: CarBrand; //enum -
   model: CarModels; //enum
   enginePower: number;
   doors: number;
   seats: number;
-  transmission: TransimissionType; //enum
+  transmission: TransimissionType; //enum -
 }

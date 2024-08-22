@@ -1,6 +1,7 @@
 <nav>
   <ul>
-    <li (click)="onSelectPage.emit('home')">Home</li>
-    <li (click)="onSelectPage.emit('room')">Rooms</li>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/rooms" routerLinkActive="active">Rooms</a></li>
+    <li><a routerLink="/guests">Guests</a></li>
   </ul>
 </nav>

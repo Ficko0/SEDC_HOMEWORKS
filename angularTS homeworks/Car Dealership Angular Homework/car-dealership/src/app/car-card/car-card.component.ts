@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgIf } from '@angular/common';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-car-card',
@@ -23,6 +24,8 @@ import { NgIf } from '@angular/common';
     MatBadgeModule,
     MatTooltipModule,
     NgIf,
+    RouterOutlet,
+    RouterLink,
   ],
   templateUrl: './car-card.component.html',
   styleUrl: './car-card.component.css',

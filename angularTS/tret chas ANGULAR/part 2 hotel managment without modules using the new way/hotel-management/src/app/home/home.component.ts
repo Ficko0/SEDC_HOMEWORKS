@@ -1,22 +1,34 @@
-import { Component, computed, input, signal } from '@angular/core';
-import { Room } from '../../types/room.interface';
+import { Room } from './../../types/room.interface';
+import {
+  Component,
+  computed,
+  input,
+  OnDestroy,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { SearchComponent } from '../search/search.component';
 import { RoomsComponent } from '../rooms/rooms.component';
 import { FiltersComponent } from '../filters/filters.component';
 import { Board } from '../../types/board.enum';
 import { RoomView } from '../../types/room-view.enum';
 import { ParkingType } from '../../types/parking-type.enum';
-import { filter } from 'rxjs';
+import { RoomsService } from '../../services/rooms.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [SearchComponent, RoomsComponent, FiltersComponent],
+  providers: [RoomsService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
-  rooms = input<Room[]>([]);
+export class HomeComponent implements OnInit, OnDestroy {
+  rooms = signal<Room[]>([]);
+
+  // Used for creating a subscription.
+  subscription: Subscription = new Subscription();
 
   // Modern way of setting a state for a search bar
   searchTerm = signal<string>('');
@@ -92,6 +104,16 @@ export class HomeComponent {
     return filteredRooms;
   });
 
+  // Implementing the roomService from the service
+  constructor(private roomService: RoomsService) {}
+
+  //ngOnInit or useEffect
+  ngOnInit() {
+    this.subscription = this.roomService.rooms.subscribe((rooms: Room[]) => {
+      this.rooms.set(rooms);
+    });
+  }
+
   // For the Filters
   guestCapacity = signal<number>(1);
   beds = signal<number>(1);
@@ -108,5 +130,11 @@ export class HomeComponent {
   // Handling the search term
   handleSearchTerm(updatedSearchTerm: string): void {
     this.searchTerm.update((): string => updatedSearchTerm);
+  }
+
+  // Unsubscribing.
+  // Used when destroying the component or changing to another component.
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

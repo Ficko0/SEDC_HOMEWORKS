@@ -1,7 +1,22 @@
-<mat-grid-list cols="2" class="grid" gutterSize="10rem" rowHeight="75rem">
-  @for (car of cars(); track car.id) {
-  <mat-grid-tile>
-    <app-car-card [car]="car" />
-  </mat-grid-tile>
-  }
-</mat-grid-list>
+<app-filter-component
+  [carType]="carType()"
+  (onCarTypeChange)="carType.set($event)"
+  [isNew]="isNew()"
+  (onIsNewChange)="isNew.set($event)"
+  [carBrand]="carBrand()"
+  (onCarBrandChange)="carBrand.set($event)"
+  [carColor]="carColor()"
+  (onCarColorChange)="carColor.set($event)"
+  [carModel]="carModel()"
+  (onCarModelChange)="carModel.set($event)"
+  [carTransmission]="carTransmission()"
+  (onCarTransmissionChange)="carTransmission.set($event)"
+  [priceFrom]="priceFrom()"
+  (onPriceFromChange)="priceFrom.set($event)"
+  [priceTo]="priceTo()"
+  (onPriceToChange)="priceTo.set($event)"
+  [carFuelType]="carFuelType()"
+  (onCarFuelTypeChange)="carFuelType.set($event)"
+/>
+
+<app-car-display-page [cars]="filteredCars()" />

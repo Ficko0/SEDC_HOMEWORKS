@@ -3,9 +3,9 @@
   <span>The #1 Car Dealership WorldWide!</span>
   <nav>
     <ul>
-      <li (click)="onSelectPage.emit('home')">Home</li>
-      <li (click)="onSelectPage.emit('about us')">About Us</li>
-      <li (click)="onSelectPage.emit('contact')">Contact</li>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about">About Us</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
     </ul>
   </nav>
 </header>

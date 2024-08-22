@@ -1,0 +1,113 @@
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpenState.set(true)"
+    (closed)="panelOpenState.set(false)"
+  >
+    <mat-expansion-panel-header>
+      @if (!panelOpenState()) { Show } @else { Hide }
+    </mat-expansion-panel-header>
+    <div class="flex-container">
+      <div>
+        <mat-checkbox [checked]="isNew()" (click)="onIsNewChange.emit(!isNew())"
+          >New / Old
+        </mat-checkbox>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Type</mat-label>
+          <mat-select
+            >@for (carType of carTypeOptions; track carType) {<mat-option
+              [value]="carType"
+              (click)="onCarTypeChange.emit(carType)"
+              >{{ carType }}</mat-option
+            >
+            }</mat-select
+          >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Models</mat-label>
+          <mat-select>
+            @for(carModel of carModelOptions; track carModel) {
+            <mat-option
+              [value]="carModel"
+              (click)="onCarModelChange.emit(carModel)"
+              >{{ carModel }}</mat-option
+            >
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Car Brand</mat-label>
+          <mat-select>
+            @for (carBrand of carBrandOptions; track carBrand) {
+            <mat-option
+              [value]="carBrand"
+              (click)="onCarBrandChange.emit(carBrand)"
+              >{{ carBrand }}</mat-option
+            >
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Transmission Type</mat-label>
+          <mat-select>
+            @for (transType of carTransmissionOptions; track transType) {
+            <mat-option
+              [value]="transType"
+              (click)="onCarTransmissionChange.emit(transType)"
+              >{{ transType }}</mat-option
+            >
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <p><b>Price Range: </b>${{ priceFrom() }} - ${{ priceTo() }}</p>
+        <mat-slider min="9000" max="300000">
+          <input
+            matSliderStartThumb
+            [ngModel]="priceFrom()"
+            (ngModelChange)="onPriceFromChange.emit($event)"
+          />
+          <input
+            matSliderEndThumb
+            [ngModel]="priceTo()"
+            (ngModelChange)="onPriceToChange.emit($event)"
+          />
+        </mat-slider>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Color Options</mat-label>
+          <mat-select>
+            @for(color of carColorOptions; track color) {<mat-option
+              [value]="color"
+              (click)="onCarColorChange.emit(color)"
+              >{{ color }}</mat-option
+            >}
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Fuel Type</mat-label>
+          <mat-select>
+            @for (fuelType of carFuelTypeOptions; track fuelType) {
+            <mat-option
+              [value]="fuelType"
+              (click)="onCarFuelTypeChange.emit(fuelType)"
+              >{{ fuelType }}</mat-option
+            >
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

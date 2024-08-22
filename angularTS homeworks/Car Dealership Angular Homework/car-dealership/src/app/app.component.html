@@ -1,16 +1,5 @@
-<app-header (onSelectPage)="handlePageSelect($event)" />
+<app-header />
 
-@if (selectedPage() === 'home') {
-<!-- render home -->
-<app-home [cars]="cars()" />
-} @else if (selectedPage() === 'about us') {
-<!-- render about us -->
-<app-about-us />
-} @else if (selectedPage() === 'contact') {
-<!-- render contact -->
-<app-contact-page />
-} @else {
-<h1>No Page Selected</h1>
-}
+<router-outlet />
 
 <app-footer />

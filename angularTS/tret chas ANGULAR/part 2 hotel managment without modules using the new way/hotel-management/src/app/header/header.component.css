@@ -9,3 +9,7 @@ ul {
     cursor: pointer;
   }
 }
+
+.active {
+  color: darkgray;
+}

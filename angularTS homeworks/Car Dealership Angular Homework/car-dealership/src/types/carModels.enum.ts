@@ -1,4 +1,5 @@
 export enum CarModels {
+  None = 'None',
   // Acura
   AcuraNSX = 'Acura NSX',
   AcuraMDX = 'Acura MDX',
