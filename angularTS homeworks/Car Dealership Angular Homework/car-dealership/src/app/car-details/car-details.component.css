@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+  padding: 1.5rem;
+  color: whitesmoke;
+  font-size: 2.5rem;
+}
+
+.model {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image > img {
+  width: 20rem;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 5rem 2rem;
+}
+
+.specs h2 {
+  color: whitesmoke;
+  font-size: 2.2rem;
+}
+
+.specs p {
+  color: whitesmoke;
+  font-size: 1.1rem;
+}

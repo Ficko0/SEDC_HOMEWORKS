@@ -1,21 +1,31 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Car } from '../types/car.interface';
-import carDb from '../data/cars.json';
+import { SearchCarQuery } from '../types/SearchCarQuery.interface';
+import { Response } from '../types/response.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CarsService {
-  private _cars: BehaviorSubject<Car[]> = new BehaviorSubject<Car[]>([]);
+  carPath: string = 'http://localhost:3000/api/cars';
 
-  cars: Observable<Car[]> = this._cars.asObservable();
+  constructor(private readonly http: HttpClient) {}
 
-  constructor() {
-    this.updateCars(carDb as Car[]);
+  getCars(searchQuery: SearchCarQuery = {}): Observable<Response<Car[]>> {
+    return this.http.get<Response<Car[]>>(this.carPath, {
+      params: {
+        ...searchQuery,
+      },
+    });
   }
 
-  updateCars(cars: Car[]) {
-    this._cars.next(cars);
+  getCar(id: string): Observable<Car> {
+    return this.http.get<Car>(`${this.carPath}/${id}`);
+  }
+
+  createCarSale(car: Car) {
+    return this.http.post<Car>(this.carPath, car);
   }
 }

@@ -1,0 +1,36 @@
+<form [formGroup]="authForm" (ngSubmit)="submit()">
+  <div class="container">
+    <h2>{{ type() }}</h2>
+
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <input
+        matInput
+        placeholder="E-Mail"
+        formControlName="email"
+        type="email"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+      />
+    </mat-form-field>
+
+    <button type="submit" mat-flat-button [disabled]="authForm.invalid">
+      {{ type() }}
+    </button>
+
+    <div>
+      <p>
+        Not registered? Click <a [routerLink]="['/', typeSwitch()]">Here</a> to
+        {{ typeSwitch() }}
+      </p>
+    </div>
+  </div>
+</form>

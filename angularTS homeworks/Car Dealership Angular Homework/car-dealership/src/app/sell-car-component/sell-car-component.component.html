@@ -1,0 +1,118 @@
+<form [formGroup]="createCarSale">
+  <h2>Sell your car through us!</h2>
+  <hr />
+  <div class="flex-container">
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input type="text" matInput placeholder="Price" formControlName="price" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Car Type</mat-label>
+      <mat-select>
+        @for (type of typeOptions; track type) {
+        <mat-option [value]="type" formControlName="type">{{
+          type
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Year of Production</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Year Of Production"
+        formControlName="year"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Color</mat-label>
+      <mat-select>
+        @for (color of colorOptions; track color) {
+        <mat-option [value]="color" formControlName="color">{{
+          color
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fuel Type</mat-label>
+      <mat-select>
+        @for (fuelType of fuelOptions; track fuelType) {
+        <mat-option [value]="fuelType" formControlName="fuelType">{{
+          fuelType
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Distance</mat-label>
+      <input
+        matInput
+        placeholder="Distance"
+        type="number"
+        formControlName="distance"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Brand</mat-label>
+      <mat-select>
+        @for (brand of brandOptions; track brand) {
+        <mat-option [value]="brand" formControlName="brand">{{
+          brand
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Model</mat-label>
+      <mat-select>
+        @for (model of modelOptions; track model) {
+        <mat-option [value]="model" formControlName="model">{{
+          model
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Engine Power</mat-label>
+      <input
+        matInput
+        placeholder="Engine Power"
+        type="number"
+        formControlName="enginePower"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Doors</mat-label>
+      <input
+        matInput
+        placeholder="Doors"
+        type="number"
+        formControlName="doors"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Seats</mat-label>
+      <input
+        matInput
+        placeholder="Seats"
+        type="number"
+        formControlName="seats"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Transmission</mat-label>
+      <mat-select>
+        @for (transmission of transOptions; track transmission) {
+        <mat-option [value]="transmission" formControlName="transmission">{{
+          transmission
+        }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <div class="button">
+      <button type="submit" mat-flat-button>Submit Sale</button>
+    </div>
+  </div>
+</form>

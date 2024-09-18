@@ -1,0 +1,23 @@
+<app-loader [isLoading]="isLoading()" />
+
+<ol>
+  @for (guest of guests$ | async; track guest) {
+  <li>
+    <div>
+      {{ guest.firstName }} {{ guest.lastName }} |
+      {{ guest.bookings.length }} bookings
+    </div>
+    <ul>
+      @for (booking of guest.bookings; track booking.id) {
+      <li>
+        <em>Start Date: </em>
+        {{ booking.startDate | date }}
+        |
+        <em>End Date: </em>
+        {{ booking.endDate | date }}
+      </li>
+      }
+    </ul>
+  </li>
+  }
+</ol>

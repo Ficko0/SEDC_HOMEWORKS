@@ -1,0 +1,23 @@
+@if ((cars$ | async)) {
+<div>
+  <h1>{{ (cars$ | async)?.brand }}</h1>
+  <h2 class="model">{{ (cars$ | async)?.model }}</h2>
+
+  <div class="image">
+    @for (imageUrl of (cars$ | async)?.images; track imageUrl) {
+    <img [src]="imageUrl" />
+    }
+  </div>
+
+  <div class="specs">
+    <h2>Car Specifications:</h2>
+
+    <p>Distance Covered: {{ (cars$ | async)?.distance }}km</p>
+    <p>Color: {{ (cars$ | async)?.color }}</p>
+    <p>Transmission Type: {{ (cars$ | async)?.transmission }}</p>
+    <p>Fuel Type: {{ (cars$ | async)?.fuelType }}</p>
+  </div>
+</div>
+} @else if (!(cars$ | async)) {
+<p>Car Not Found</p>
+}

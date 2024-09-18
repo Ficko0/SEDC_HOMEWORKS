@@ -10,7 +10,7 @@
   </mat-card-header>
   <div class="container">
     <img
-      [src]="car()?.images"
+      [src]="car()?.images?.[0]"
       [alt]="car()?.brand"
       width="100%"
       height="auto"
@@ -50,6 +50,7 @@
     </button>
     }
     <button mat-button>Buy</button>
+    <button mat-button [routerLink]="['/cars', car()?.id]">Check it Out</button>
   </mat-card-actions>
   <router-outlet></router-outlet>
 </mat-card>

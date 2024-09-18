@@ -19,4 +19,4 @@
   (onCarFuelTypeChange)="carFuelType.set($event)"
 />
 
-<app-car-display-page [cars]="filteredCars()" />
+<app-car-display-page [cars]="(cars$ | async) || []" />
